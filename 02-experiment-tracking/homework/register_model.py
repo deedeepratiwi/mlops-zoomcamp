@@ -76,7 +76,7 @@ def run_register_model(data_path: str, top_n: int):
         run_view_type=ViewType.ACTIVE_ONLY,
         max_results=1,
         order_by=["metrics.rmse ASC"]
-    )[0]
+    )
 
     for run in best_run:
         print(f"Best run id: {run.info.run_id}, rmse {run.data.metrics['rmse']:.4f}")
